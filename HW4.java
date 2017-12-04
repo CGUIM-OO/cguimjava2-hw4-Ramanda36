@@ -4,20 +4,20 @@ import java.util.HashMap;
 public class HW4 {
 	public static void main(String[] args) {
 		int nDeck=4;
-		Deck deck=new Deck(nDeck);
+		deck deck=new deck(nDeck);
 		//TODO: please check your output, make sure that 
-		Player player1=new Player("Player 1",100);
-		Player player2=new Player("Player 2",300);
+		player player1=new player("Player 1",100);
+		player player2=new player("Player 2",300);
 		player1.sayHello();
 		player2.sayHello();
 		int p1Bet=player1.makeBet();
 		int p2Bet=player2.makeBet();
-		ArrayList<Card> player1Card=new ArrayList<Card>();
+		ArrayList<card> player1Card=new ArrayList<card>();
 		player1Card.add(deck.getOneCard(true));
 		player1Card.add(deck.getOneCard(true));
 		player1.setOneRoundCard(player1Card);
 		
-		ArrayList<Card> player2Card=new ArrayList<Card>();
+		ArrayList<card> player2Card=new ArrayList<card>();
 		player2Card.add(deck.getOneCard(true));
 		player2Card.add(deck.getOneCard(true));
 		player2.setOneRoundCard(player2Card);
@@ -29,14 +29,14 @@ public class HW4 {
 				player1.setOneRoundCard(player1Card);
 				System.out.print("Hit! ");
 				System.out.println(player1.getName()+"'s Cards now:");
-				for(Card c : player1Card){
+				for(card c : player1Card){
 					c.printCard();
 				}
 			}
 			else{
 				System.out.println(player1.getName()+", Pass hit!");
 				System.out.println(player1.getName()+", Final Card:");
-				for(Card c : player1Card){
+				for(card c : player1Card){
 					c.printCard();
 				}
 			}
@@ -50,14 +50,14 @@ public class HW4 {
 				player2.setOneRoundCard(player2Card);
 				System.out.print("Hit! ");
 				System.out.println(player2.getName()+"'s Cards now:");
-				for(Card c : player2Card){
+				for(card c : player2Card){
 					c.printCard();
 				}
 			}
 			else{
 				System.out.println(player2.getName()+", Pass hit!");
 				System.out.println(player2.getName()+", Final Card:");
-				for(Card c : player2Card){
+				for(card c : player2Card){
 					c.printCard();
 				}
 			}
